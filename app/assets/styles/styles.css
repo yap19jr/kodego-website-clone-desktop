@@ -1,7 +1,9 @@
 @import 'normalize.css';
-body{
+
+body {
     color: orange;
 }
-a,a {
-
+a, a:active {
+    text-decoration: none;
+    color: inherit;
 }
