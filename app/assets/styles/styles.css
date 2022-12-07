@@ -1,10 +1,23 @@
 @import 'normalize.css';
+@import './modules/_containers';
 
-body {
-  color: orange;
+*{
+  box-sizing: border-box;
 }
-
-a, a:active {
+a,
+a:active {
   text-decoration: none;
   color: inherit;
+}
+
+.nav {
+  float: right;
+}
+
+.nav li {
+ display: inline-block;
+ margin-right: 1.5em;
+}
+.user-links{
+  float: right;
 }
