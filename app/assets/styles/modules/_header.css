@@ -8,37 +8,61 @@
       justify-content: space-between;
     }
   }
+  &__mobile-nav-toggle {
+    display: none;
+  }
 
   &__mobile-nav-trigger {
+    position: absolute;
+    top: 2.5rem;
+    right: 1.75rem;
+    width: 1.5rem;
+    height: 3px;
+    background: $mainBlue;
+
+    &::before {
+      position: relative;
+      content: "";
+      display: block;
+      background: $mainBlue;
+      height: 100%;
+      width: 100%;
+      top: -200%;
+    }
+
+    &::after {
+      position: relative;
+      content: "";
+      display: block;
+      background: $mainBlue;
+      height: 100%;
+      width: 100%;
+      top: 100%;
+    }
+
     @mixin atLaptop {
       display: none;
     }
   }
-
   &__logo {
     @mixin atLaptopLarge {
       transform: scale(0.7);
     }
   }
-
   &__nav {
     display: none;
-
     @mixin atLaptopLarge {
       display: flex;
       justify-content: space-between;
-
       & > ul {
         display: flex;
         align-items: center;
-
         & > li {
           margin-right: 1em;
         }
       }
     }
   }
-
   &__user-links {
     @mixin atLaptopLarge {
       width: 14rem;
