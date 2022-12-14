@@ -1,11 +1,13 @@
 .container {
-  width: 85%;
-  margin: auto;
-  &--padded {
-    padding: 1.25rem;
-  }
+  width: 100%;
+  padding: 1rem;
 
-  &--wide {
+  @mixin atLargeScreen {
     width: 90%;
+    margin: auto;
+
+    &--padded {
+      padding: 1.25;
+    }
   }
 }
