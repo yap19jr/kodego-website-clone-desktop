@@ -1,6 +1,5 @@
 .header {
   color: $mainBlue;
-
   &__container {
     @mixin atLaptopLarge {
       display: flex;
@@ -13,6 +12,7 @@
   }
 
   &__mobile-nav-trigger {
+    z-index: 10;
     position: absolute;
     top: 2.5rem;
     right: 1.75rem;
@@ -21,6 +21,7 @@
     background: $mainBlue;
 
     &::before {
+      z-index: 10;
       position: relative;
       content: "";
       display: block;
@@ -31,6 +32,7 @@
     }
 
     &::after {
+      z-index: 10;
       position: relative;
       content: "";
       display: block;
@@ -39,7 +41,6 @@
       width: 100%;
       top: 100%;
     }
-
     @mixin atLaptop {
       display: none;
     }
@@ -49,8 +50,34 @@
       transform: scale(0.7);
     }
   }
+
   &__nav {
-    display: none;
+    border: 1px solid black;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 5rem 2.5rem 2.5rem 5rem;
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin-left: -50%;
+    }
+
     @mixin atLaptopLarge {
       display: flex;
       justify-content: space-between;
