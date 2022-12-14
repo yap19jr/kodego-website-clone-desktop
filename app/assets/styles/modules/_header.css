@@ -2,7 +2,7 @@
   color: $mainBlue;
 
   &__container {
-    @mixin atLargeScreen {
+    @mixin atLaptopLarge {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -10,13 +10,13 @@
   }
 
   &__mobile-nav-trigger {
-    @mixin atLargeScreen {
+    @mixin atLaptop {
       display: none;
     }
   }
 
   &__logo {
-    @mixin atLargeScreen {
+    @mixin atLaptopLarge {
       transform: scale(0.7);
     }
   }
@@ -24,7 +24,7 @@
   &__nav {
     display: none;
 
-    @mixin atLargeScreen {
+    @mixin atLaptopLarge {
       display: flex;
       justify-content: space-between;
 
@@ -40,7 +40,7 @@
   }
 
   &__user-links {
-    @mixin atLargeScreen {
+    @mixin atLaptopLarge {
       width: 14rem;
     }
   }
